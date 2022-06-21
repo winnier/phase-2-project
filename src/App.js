@@ -23,12 +23,8 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <h1>Finance!</h1>
-      <hr></hr>
-    
       <StockPage/>
       <MyPortfolio/>
-     
     </div>
   );
 }
