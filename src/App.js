@@ -7,7 +7,7 @@ function App() {
 
   let ticker = 'CSCO'
 
-  let pull_function = 'TIME_SERIES_DAILY'
+  let pull_function = 'GLOBAL_QUOTE'
 
   fetch(`https://www.alphavantage.co/query?function=${pull_function}&symbol=${ticker}&apikey=A85G8HED7A54MTDR`)
   .then(res => res.json())
