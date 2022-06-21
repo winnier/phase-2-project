@@ -1,7 +1,6 @@
 import React from "react";
 
 function StockCard({ stock }) {
-
   return (
     <div>
       <div className="card">

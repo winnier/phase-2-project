@@ -4,7 +4,7 @@ import StockContainer from "./StockContainer"
 
 function StockPage({ stockDb }) {
     
-
+ 
     return (
         <div>
            <SearchBar />
