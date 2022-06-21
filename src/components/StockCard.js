@@ -6,9 +6,11 @@ function StockCard({ stock }) {
       <div className="card">
         <div className="card-body">
           <h5 className="card-title">{stock.Name}</h5>
-          <p className="card-ticker">{stock.Symbol}</p>
-          <p className="card-text">{stock["Last Sale"]}</p>
-          <p className="card-sector">{stock.Sector}</p>
+          <div className="card-details">
+            <p className="ticker">{stock.Symbol}</p>
+            <p className="price">{stock["Last Sale"]}</p>
+            <p className="sector">{stock.Sector}</p>
+          </div>
         </div>
       </div>
     </div>
