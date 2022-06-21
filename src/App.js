@@ -1,6 +1,11 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
 import { useEffect } from 'react';
+import NavBar from './components/NavBar'
+import StockPage from "./components/StockPage"
+import MyPortfolio from './components/MyPortfolio'
+import SearchBar from './components/SearchBar'
+
 
 
 function App() {
@@ -15,7 +20,13 @@ function App() {
 
   return (
     <div>
+      <NavBar/>
       <h1>Finance!</h1>
+      <hr></hr>
+    
+      <StockPage/>
+      <MyPortfolio/>
+     
     </div>
   );
 }
