@@ -16,6 +16,16 @@ function App() {
   const [stockDb, setStockDb] = useState([])
   const [watchlist, setWatchlist] = useState([])
 
+  useEffect(() => {
+    fetch("http://localhost:3000/stocks")
+    .then(response => response.json())
+    .then(items=> {
+        setStockDb(items);
+    });
+  }, []);
+
+
+
   // fetch(`https://www.alphavantage.co/query?function=${pull_function}&symbol=${ticker}&apikey=A85G8HED7A54MTDR`)
   // .then(res => res.json())
   // .then((data) => console.log(data))
@@ -23,7 +33,7 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <StockPage/>
+      <StockPage stockDb={stockDb}/>
       <MyPortfolio/>
     </div>
   );

@@ -2,8 +2,8 @@ import React from "react"
 import SearchBar from "./SearchBar"
 import StockContainer from "./StockContainer"
 
-function StockPage() {
-
+function StockPage({stockDb}) {
+    
 
 
     return (
