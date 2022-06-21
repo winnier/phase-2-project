@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
 
 
 function App() {
+
+  let ticker = 'CSCO'
+
+  let pull_function = 'TIME_SERIES_DAILY'
+
+  fetch(`https://www.alphavantage.co/query?function=${pull_function}&symbol=${ticker}&apikey=A85G8HED7A54MTDR`)
+  .then(res => res.json())
+  .then((data) => console.log(data))
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Finance!</h1>
     </div>
   );
 }
