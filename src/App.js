@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/stocks")
     .then(response => response.json())
-    .then(items=> {
+    .then(items => {
         setStockDb(items);
     });
   }, []);
@@ -34,7 +34,7 @@ function App() {
     <div>
       <NavBar/>
       <StockPage stockDb={stockDb}/>
-      <MyPortfolio/>
+      {/* <MyPortfolio/> */}
     </div>
   );
 }

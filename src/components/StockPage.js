@@ -2,7 +2,7 @@ import React from "react"
 import SearchBar from "./SearchBar"
 import StockContainer from "./StockContainer"
 
-function StockPage({stockDb}) {
+function StockPage({ stockDb }) {
     
 
     return (
@@ -10,7 +10,7 @@ function StockPage({stockDb}) {
            <SearchBar />
         <div className="row">
             <div className="col-8">
-            <StockContainer />
+            <StockContainer stockDb={stockDb}/>
             </div>
        </div>
         </div>
