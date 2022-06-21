@@ -24,6 +24,13 @@ function App() {
     });
   }, []);
 
+  function handleAddToPortfolio(newItem) {
+    if (watchlist.indexOf(newItem) === -1) {
+       setWatchlist([...watchlist, newItem]) 
+    }
+  } 
+
+
 
 
   // fetch(`https://www.alphavantage.co/query?function=${pull_function}&symbol=${ticker}&apikey=A85G8HED7A54MTDR`)
@@ -33,8 +40,9 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <StockPage stockDb={stockDb}/>
-      {/* <MyPortfolio/> */}
+      <StockPage stockDb={ stockDb } handleAddToPortfolio={ handleAddToPortfolio }/>
+      <hr></hr>
+      <MyPortfolio watchlist={ watchlist } />
     </div>
   );
 }
