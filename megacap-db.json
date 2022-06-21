@@ -2,7 +2,7 @@
     "stocks": [
     {
       "Symbol": "AAPL",
-      "Name": "Apple Inc. Common Stock",
+      "Name": "Apple Inc.",
       "Last Sale": "$136.06",
       "Net Change": 4.5,
       "% Change": "3.42%",
@@ -15,7 +15,7 @@
     },
     {
       "Symbol": "ABBV",
-      "Name": "AbbVie Inc. Common Stock",
+      "Name": "AbbVie Inc.",
       "Last Sale": "$143.775",
       "Net Change": 5.495,
       "% Change": "3.974%",
@@ -28,7 +28,7 @@
     },
     {
       "Symbol": "AMZN",
-      "Name": "Amazon.com Inc. Common Stock",
+      "Name": "Amazon.com Inc.",
       "Last Sale": "$109.05",
       "Net Change": 2.83,
       "% Change": "2.664%",
@@ -41,7 +41,7 @@
     },
     {
       "Symbol": "AVGO",
-      "Name": "Broadcom Inc. Common Stock",
+      "Name": "Broadcom Inc.",
       "Last Sale": "$504.60",
       "Net Change": 10.05,
       "% Change": "2.032%",
@@ -54,7 +54,7 @@
     },
     {
       "Symbol": "BABA",
-      "Name": "Alibaba Group Holding Limited American Depositary Shares each representing eight Ordinary share",
+      "Name": "Alibaba Group Holding Limited",
       "Last Sale": "$106.81",
       "Net Change": 4.57,
       "% Change": "4.47%",
@@ -67,7 +67,7 @@
     },
     {
       "Symbol": "BAC",
-      "Name": "Bank of America Corporation Common Stock",
+      "Name": "Bank of America Corporation",
       "Last Sale": "$32.93",
       "Net Change": 1.01,
       "% Change": "3.164%",
@@ -80,7 +80,7 @@
     },
     {
       "Symbol": "COST",
-      "Name": "Costco Wholesale Corporation Common Stock",
+      "Name": "Costco Wholesale Corporation",
       "Last Sale": "$464.5099",
       "Net Change": 17.8199,
       "% Change": "3.989%",
@@ -93,7 +93,7 @@
     },
     {
       "Symbol": "CVX",
-      "Name": "Chevron Corporation Common Stock",
+      "Name": "Chevron Corporation",
       "Last Sale": "$155.65",
       "Net Change": 7.27,
       "% Change": "4.90%",
@@ -106,7 +106,7 @@
     },
     {
       "Symbol": "FTNT",
-      "Name": "Fortinet Inc. Common Stock",
+      "Name": "Fortinet Inc.",
       "Last Sale": "$280.312",
       "Net Change": 11.322,
       "% Change": "4.209%",
@@ -119,7 +119,7 @@
     },
     {
       "Symbol": "GOOG",
-      "Name": "Alphabet Inc. Class C Capital Stock",
+      "Name": "Alphabet Inc. Class C",
       "Last Sale": "$2244.00",
       "Net Change": 86.69,
       "% Change": "4.018%",
@@ -132,7 +132,7 @@
     },
     {
       "Symbol": "GOOGL",
-      "Name": "Alphabet Inc. Class A Common Stock",
+      "Name": "Alphabet Inc. Class A",
       "Last Sale": "$2239.18",
       "Net Change": 96.31,
       "% Change": "4.494%",
@@ -145,7 +145,7 @@
     },
     {
       "Symbol": "HD",
-      "Name": "Home Depot Inc. (The) Common Stock",
+      "Name": "Home Depot Inc.",
       "Last Sale": "$269.82",
       "Net Change": -0.91,
       "% Change": "-0.336%",
@@ -158,7 +158,7 @@
     },
     {
       "Symbol": "JNJ",
-      "Name": "Johnson & Johnson Common Stock",
+      "Name": "Johnson & Johnson",
       "Last Sale": "$173.53",
       "Net Change": 4.07,
       "% Change": "2.402%",
@@ -171,7 +171,7 @@
     },
     {
       "Symbol": "JPM",
-      "Name": "JP Morgan Chase & Co. Common Stock",
+      "Name": "JP Morgan Chase & Co.",
       "Last Sale": "$115.9866",
       "Net Change": 2.9566,
       "% Change": "2.616%",
@@ -184,7 +184,7 @@
     },
     {
       "Symbol": "KO",
-      "Name": "Coca-Cola Company (The) Common Stock",
+      "Name": "Coca-Cola Company",
       "Last Sale": "$60.755",
       "Net Change": 1.325,
       "% Change": "2.23%",
@@ -197,7 +197,7 @@
     },
     {
       "Symbol": "LLY",
-      "Name": "Eli Lilly and Company Common Stock",
+      "Name": "Eli Lilly and Company",
       "Last Sale": "$298.39",
       "Net Change": 7.49,
       "% Change": "2.575%",
@@ -210,7 +210,7 @@
     },
     {
       "Symbol": "MA",
-      "Name": "Mastercard Incorporated Common Stock",
+      "Name": "Mastercard Incorporated",
       "Last Sale": "$318.30",
       "Net Change": 7.61,
       "% Change": "2.449%",
@@ -223,7 +223,7 @@
     },
     {
       "Symbol": "META",
-      "Name": "Meta Platforms Inc. Class A Common Stock",
+      "Name": "Meta Platforms Inc. Class A",
       "Last Sale": "$156.97",
       "Net Change": -6.77,
       "% Change": "-4.135%",
@@ -236,7 +236,7 @@
     },
     {
       "Symbol": "MRK",
-      "Name": "Merck & Company Inc. Common Stock (new)",
+      "Name": "Merck & Company Inc.",
       "Last Sale": "$88.29",
       "Net Change": 3.67,
       "% Change": "4.337%",
@@ -249,7 +249,7 @@
     },
     {
       "Symbol": "MSFT",
-      "Name": "Microsoft Corporation Common Stock",
+      "Name": "Microsoft Corporation",
       "Last Sale": "$254.13",
       "Net Change": 6.48,
       "% Change": "2.617%",
@@ -262,7 +262,7 @@
     },
     {
       "Symbol": "NVDA",
-      "Name": "NVIDIA Corporation Common Stock",
+      "Name": "NVIDIA Corporation",
       "Last Sale": "$165.98",
       "Net Change": 7.18,
       "% Change": "4.521%",
@@ -275,7 +275,7 @@
     },
     {
       "Symbol": "NVO",
-      "Name": "Novo Nordisk A/S Common Stock",
+      "Name": "Novo Nordisk A/S",
       "Last Sale": "$108.03",
       "Net Change": 2.45,
       "% Change": "2.321%",
@@ -288,7 +288,7 @@
     },
     {
       "Symbol": "PEP",
-      "Name": "PepsiCo Inc. Common Stock",
+      "Name": "PepsiCo Inc.",
       "Last Sale": "$160.63",
       "Net Change": 3.57,
       "% Change": "2.273%",
@@ -301,7 +301,7 @@
     },
     {
       "Symbol": "PFE",
-      "Name": "Pfizer Inc. Common Stock",
+      "Name": "Pfizer Inc.",
       "Last Sale": "$48.265",
       "Net Change": 1.735,
       "% Change": "3.729%",
@@ -314,7 +314,7 @@
     },
     {
       "Symbol": "PG",
-      "Name": "Procter & Gamble Company (The) Common Stock",
+      "Name": "Procter & Gamble Company",
       "Last Sale": "$136.62",
       "Net Change": 4.26,
       "% Change": "3.218%",
@@ -327,7 +327,7 @@
     },
     {
       "Symbol": "SHOP",
-      "Name": "Shopify Inc. Class A Subordinate Voting Shares",
+      "Name": "Shopify Inc.",
       "Last Sale": "$328.8601",
       "Net Change": 11.9701,
       "% Change": "3.777%",
@@ -340,7 +340,7 @@
     },
     {
       "Symbol": "TM",
-      "Name": "Toyota Motor Corporation Common Stock",
+      "Name": "Toyota Motor Corporation",
       "Last Sale": "$159.525",
       "Net Change": 5.575,
       "% Change": "3.621%",
@@ -353,7 +353,7 @@
     },
     {
       "Symbol": "TMO",
-      "Name": "Thermo Fisher Scientific Inc Common Stock",
+      "Name": "Thermo Fisher Scientific Inc",
       "Last Sale": "$514.715",
       "Net Change": 13.815,
       "% Change": "2.758%",
@@ -366,7 +366,7 @@
     },
     {
       "Symbol": "TSLA",
-      "Name": "Tesla Inc. Common Stock",
+      "Name": "Tesla Inc.",
       "Last Sale": "$719.21",
       "Net Change": 68.93,
       "% Change": "10.60%",
@@ -379,7 +379,7 @@
     },
     {
       "Symbol": "TSM",
-      "Name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+      "Name": "Taiwan Semiconductor Manufacturing Company Ltd",
       "Last Sale": "$87.01",
       "Net Change": 2.01,
       "% Change": "2.365%",
@@ -392,7 +392,7 @@
     },
     {
       "Symbol": "UNH",
-      "Name": "UnitedHealth Group Incorporated Common Stock (DE)",
+      "Name": "UnitedHealth Group Incorporated",
       "Last Sale": "$481.05",
       "Net Change": 28.99,
       "% Change": "6.413%",
@@ -418,7 +418,7 @@
     },
     {
       "Symbol": "VZ",
-      "Name": "Verizon Communications Inc. Common Stock",
+      "Name": "Verizon Communications Inc.",
       "Last Sale": "$50.765",
       "Net Change": 1.735,
       "% Change": "3.539%",
@@ -431,7 +431,7 @@
     },
     {
       "Symbol": "WMT",
-      "Name": "Walmart Inc. Common Stock",
+      "Name": "Walmart Inc.",
       "Last Sale": "$122.475",
       "Net Change": 4.185,
       "% Change": "3.538%",
@@ -444,7 +444,7 @@
     },
     {
       "Symbol": "XOM",
-      "Name": "Exxon Mobil Corporation Common Stock",
+      "Name": "Exxon Mobil Corporation",
       "Last Sale": "$92.01",
       "Net Change": 5.89,
       "% Change": "6.839%",
