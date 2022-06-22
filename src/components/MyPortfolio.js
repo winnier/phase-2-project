@@ -2,13 +2,10 @@ import React from 'react'
 import StockCard from './StockCard'
 
 
-function MyPortfolio({ watchlist }) {
+function MyPortfolio({ watchlist, handleDeletePortfolio }) {
     const portfolioList = watchlist.map((item) => {
-        return <StockCard key={item.Symbol} stock={item} />
+        return <StockCard key={ item.Symbol } stock={ item } onClickDelete={ handleDeletePortfolio }/>
     })
-
-console.log(watchlist)
-
     
     return (
         <div>

@@ -6,7 +6,7 @@ function StockContainer({ stockDb, handleAddToPortfolio }) {
 
   
   const stockList = stockDb.map(item => {
-    return <StockCard key={item.Symbol} stock={item} handleAddToPortfolio={handleAddToPortfolio}/>
+    return <StockCard key={ item.Symbol } stock={ item } onClickAdd={ handleAddToPortfolio }/>
   })
   return (
     <div>

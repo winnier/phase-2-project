@@ -12,7 +12,7 @@ function StockPage({ stockDb, handleAddToPortfolio }) {
            <SearchBar />
         <div className="row">
             <div className="col-8">
-            <StockContainer stockDb={stockDb} handleAddToPortfolio={handleAddToPortfolio} />
+            <StockContainer stockDb={ stockDb } handleAddToPortfolio={ handleAddToPortfolio } />
             </div>
        </div>
         </div>
