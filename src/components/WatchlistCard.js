@@ -4,10 +4,10 @@ function WatchlistCard({ stock, onClickDelete, onCickAddToDetails }) {
     return (
       <div>
         <div className="watchlist-card">
-          <div className="watchlist-card-body" onClick={() => onClickDelete(stock)}>
+          <div className="watchlist-card-body">
             <div className="card-top-row">
               <h5 className="watchlist-card-title">{stock.Name}</h5>
-              <button className="watchlist-remove-btn">x</button>
+              <button className="watchlist-remove-btn" onClick={() => onClickDelete(stock)}>x</button>
             </div>
             <div className="watchlist-card-details">
               <p className="watchlist-ticker">{stock.Symbol}</p>
