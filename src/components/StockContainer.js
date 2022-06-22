@@ -11,7 +11,7 @@ function StockContainer({ displayList, handleAddToPortfolio }) {
   return (
     <div>
       <h2>Stocks</h2>
-      <div>
+      <div className="card-container">
         {stockList}
       </div>
     </div>

@@ -8,11 +8,11 @@ function StockPage({ displayList, handleAddToPortfolio, handleSearch }) {
   
 
     return (
-        <div>
+        <div className="stock-page">
             <div className="search-container">
                 <SearchBar handleSearch={handleSearch}/>
             </div>
-            <div className="row">
+            <div className="all-stocks-container">
                 <div className="col-8">
                 <StockContainer displayList={displayList} handleAddToPortfolio={handleAddToPortfolio} />
                 </div>

@@ -28,23 +28,20 @@ function App() {
   function handleAddToPortfolio(newItem) {
     if (watchlist.indexOf(newItem) === -1) {
        setWatchlist([...watchlist, newItem]) 
-    } else {
-      console.log("Stock is already in portfolio!")
     }
   }
 
   function handleSearch(searchText) {
-    // console.log(searchText)
     setDisplayList(stockDb.filter(item => {
-      return item.Name.toLowerCase().includes(searchText.toLowerCase())
+      let nameMatch = item.Name.toLowerCase().includes(searchText.toLowerCase())
+      let tickerMatch = item.Symbol.toLowerCase().includes(searchText.toLowerCase())
+      return nameMatch || tickerMatch
     }))
   }
 
   function handleDeletePortfolio(deleteItem) {
     const foundIndex = watchlist.findIndex(item => deleteItem.Symbol === item.Symbol);
-    if (foundIndex === -1) {
-        console.log("Stock is not in portfolio");
-    } else {
+    if (foundIndex !== -1) {
         const copyArray = [...watchlist];
         copyArray.splice(foundIndex, 1);
         setWatchlist(copyArray);
