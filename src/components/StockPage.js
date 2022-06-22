@@ -4,17 +4,19 @@ import StockContainer from "./StockContainer"
 
 
 
-function StockPage({ stockDb, handleAddToPortfolio }) {
+function StockPage({ displayList, handleAddToPortfolio, handleSearch }) {
   
 
     return (
         <div>
-           <SearchBar />
-        <div className="row">
-            <div className="col-8">
-            <StockContainer stockDb={stockDb} handleAddToPortfolio={handleAddToPortfolio} />
+            <div className="search-container">
+                <SearchBar handleSearch={handleSearch}/>
             </div>
-       </div>
+            <div className="row">
+                <div className="col-8">
+                <StockContainer displayList={displayList} handleAddToPortfolio={handleAddToPortfolio} />
+                </div>
+            </div>
         </div>
     )
 }

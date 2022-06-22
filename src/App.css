@@ -1,6 +1,6 @@
 
 .App-logo {
-  height: 20vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -47,4 +47,14 @@ h2 {
   padding: 1rem;
   display: flex;
   justify-content: space-around;
+}
+
+/* .row {
+  display: flex;
+} */
+
+.search-container {
+  display: flex;
+  justify-content: right;
+  padding-right: 5%;
 }

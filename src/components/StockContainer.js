@@ -2,10 +2,10 @@ import React from "react";
 import StockCard from "./StockCard";
 
 
-function StockContainer({ stockDb, handleAddToPortfolio }) {
+function StockContainer({ displayList, handleAddToPortfolio }) {
 
   
-  const stockList = stockDb.map(item => {
+  const stockList = displayList.map(item => {
     return <StockCard key={item.Symbol} stock={item} handleAddToPortfolio={handleAddToPortfolio}/>
   })
   return (

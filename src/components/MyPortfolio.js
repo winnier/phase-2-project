@@ -7,8 +7,6 @@ function MyPortfolio({ watchlist }) {
         return <StockCard key={item.Symbol} stock={item} />
     })
 
-console.log(watchlist)
-
     
     return (
         <div>

@@ -3,7 +3,6 @@ import './App.css';
 import NavBar from './components/NavBar'
 import StockPage from './components/StockPage'
 import MyPortfolio from './components/MyPortfolio'
-import SearchBar from './components/SearchBar'
 
 
 
@@ -14,6 +13,7 @@ function App() {
   let pull_function = 'GLOBAL_QUOTE'
 
   const [stockDb, setStockDb] = useState([])
+  const [displayList, setDisplayList] = useState([])
   const [watchlist, setWatchlist] = useState([])
 
   useEffect(() => {
@@ -21,6 +21,7 @@ function App() {
     .then(response => response.json())
     .then(items => {
         setStockDb(items);
+        setDisplayList(items);
     });
   }, []);
 
@@ -28,7 +29,14 @@ function App() {
     if (watchlist.indexOf(newItem) === -1) {
        setWatchlist([...watchlist, newItem]) 
     }
-  } 
+  }
+
+  function handleSearch(searchText) {
+    // console.log(searchText)
+    setDisplayList(stockDb.filter(item => {
+      return item.Name.toLowerCase().includes(searchText.toLowerCase())
+    }))
+  }
 
 
 
@@ -40,9 +48,10 @@ function App() {
   return (
     <div>
       <NavBar/>
-      <StockPage stockDb={ stockDb } handleAddToPortfolio={ handleAddToPortfolio }/>
-      <hr></hr>
+      <h2>My Watchlist</h2>
       <MyPortfolio watchlist={ watchlist } />
+      <hr></hr>
+      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleSearch={handleSearch}/>
     </div>
   );
 }
