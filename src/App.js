@@ -55,10 +55,13 @@ function App() {
   return (
     <div>
       <NavBar/>
+      <br></br>
       <h2>My Watchlist</h2>
       <MyPortfolio watchlist={ watchlist } handleDeletePortfolio={ handleDeletePortfolio }/>
+      <br></br>
       <hr></hr>
       <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio }  handleSearch={handleSearch}/>
+      <hr></hr>
     </div>
   );
 }
