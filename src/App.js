@@ -15,6 +15,7 @@ function App() {
   const [stockDb, setStockDb] = useState([])
   const [displayList, setDisplayList] = useState([])
   const [watchlist, setWatchlist] = useState([])
+  const [detailList, setDetailList] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3000/stocks")
@@ -28,6 +29,12 @@ function App() {
   function handleAddToPortfolio(newItem) {
     if (watchlist.indexOf(newItem) === -1) {
        setWatchlist([...watchlist, newItem]) 
+    }
+  }
+
+  function handleAddToDetails(newItem) {
+    if (detailList.indexOf(newItem) === -1) {
+       setDetailList([...detailList, newItem]) 
     }
   }
 
@@ -55,10 +62,13 @@ function App() {
   return (
     <div>
       <NavBar/>
+      <br></br>
       <h2>My Watchlist</h2>
       <MyPortfolio watchlist={ watchlist } handleDeletePortfolio={ handleDeletePortfolio }/>
+      <br></br>
       <hr></hr>
-      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio }  handleSearch={handleSearch}/>
+      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleSearch={handleSearch} handleAddToDetails={ handleAddToDetails } detailList={ detailList }/>
+      <hr></hr>
     </div>
   );
 }

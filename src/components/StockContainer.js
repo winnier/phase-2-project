@@ -2,11 +2,11 @@ import React from "react";
 import StockCard from "./StockCard";
 
 
-function StockContainer({ displayList, handleAddToPortfolio }) {
+function StockContainer({ displayList, handleAddToPortfolio, handleAddToDetails }) {
 
   
   const stockList = displayList.map(item => {
-    return <StockCard key={ item.Symbol } stock={ item } onClickAdd={ handleAddToPortfolio }/>
+    return <StockCard key={ item.Symbol } stock={ item } onClickAdd={ handleAddToPortfolio } onCickAddToDetails={ handleAddToDetails }/>
   })
   return (
     <div>
