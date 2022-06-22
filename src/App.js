@@ -28,6 +28,8 @@ function App() {
   function handleAddToPortfolio(newItem) {
     if (watchlist.indexOf(newItem) === -1) {
        setWatchlist([...watchlist, newItem]) 
+    } else {
+      console.log("Stock is already in portfolio!")
     }
   }
 
@@ -38,8 +40,16 @@ function App() {
     }))
   }
 
-
-
+  function handleDeletePortfolio(deleteItem) {
+    const foundIndex = watchlist.findIndex(item => deleteItem.Symbol === item.Symbol);
+    if (foundIndex === -1) {
+        console.log("Stock is not in portfolio");
+    } else {
+        const copyArray = [...watchlist];
+        copyArray.splice(foundIndex, 1);
+        setWatchlist(copyArray);
+    }
+}
 
   // fetch(`https://www.alphavantage.co/query?function=${pull_function}&symbol=${ticker}&apikey=A85G8HED7A54MTDR`)
   // .then(res => res.json())
@@ -49,9 +59,9 @@ function App() {
     <div>
       <NavBar/>
       <h2>My Watchlist</h2>
-      <MyPortfolio watchlist={ watchlist } />
+      <MyPortfolio watchlist={ watchlist } handleDeletePortfolio={ handleDeletePortfolio }/>
       <hr></hr>
-      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleSearch={handleSearch}/>
+      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio }  handleSearch={handleSearch}/>
     </div>
   );
 }
