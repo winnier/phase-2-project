@@ -12,19 +12,11 @@ function StockPage({ detailList, displayList, handleAddToPortfolio, handleSearch
         <div className="stock-page">
             <div className="all-stocks-container">
                 <div className="col-8">
-                <StockContainer displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleAddToDetails={ handleAddToDetails } />
+                    <StockContainer displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleAddToDetails={ handleAddToDetails } />
                 </div>
-            
             </div>            
             <div className="search-container">
                 <SearchBar handleSearch={handleSearch}/>
-            </div>
-            <br></br>
-            <hr></hr>
-            <div className="all-stocks-container">
-                <div className="col-8">
-                <StockDetails detailList={ detailList } />
-                </div>
             </div>
         </div>
     )

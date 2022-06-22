@@ -3,14 +3,11 @@ import './App.css';
 import NavBar from './components/NavBar'
 import StockPage from './components/StockPage'
 import MyPortfolio from './components/MyPortfolio'
+import StockDetails from "./components/StockDetails";
 
 
 
 function App() {
-
-  let ticker = 'CSCO'
-
-  let pull_function = 'GLOBAL_QUOTE'
 
   const [stockDb, setStockDb] = useState([])
   const [displayList, setDisplayList] = useState([])
@@ -67,8 +64,14 @@ function App() {
       <MyPortfolio watchlist={ watchlist } handleDeletePortfolio={ handleDeletePortfolio }/>
       <br></br>
       <hr></hr>
-      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleSearch={handleSearch} handleAddToDetails={ handleAddToDetails } detailList={ detailList }/>
+      <StockPage
+        displayList={ displayList }
+        handleAddToPortfolio={ handleAddToPortfolio }
+        handleSearch={handleSearch}
+        handleAddToDetails={ handleAddToDetails }
+        detailList={ detailList }/>
       <hr></hr>
+      <StockDetails detailList={ detailList } />
     </div>
   );
 }
