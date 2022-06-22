@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function StockCard({ stock, onClickAdd, onClickDelete }) {
+function StockCard({ stock, onClickAdd, onClickDelete, onCickAddToDetails }) {
 
   return (
     <div>
@@ -12,6 +12,16 @@ function StockCard({ stock, onClickAdd, onClickDelete }) {
             <p className="ticker">{stock.Symbol}</p>
             <p className="price">{stock["Last Sale"]}</p>
             <p className="sector">{stock.Sector}</p>
+            <span>
+              <div className="ui center aligned segment basic">
+                <button
+                  className="ui mini red button"
+                  onClick={() => onCickAddToDetails(stock)}
+                >
+                  Details
+                </button>
+              </div>
+            </span>
           </div>
         </div>
       </div>

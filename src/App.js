@@ -31,6 +31,12 @@ function App() {
     }
   }
 
+  function handleAddToDetails(newItem) {
+    if (watchlist.indexOf(newItem) === -1) {
+       setDisplayList([...watchlist, newItem]) 
+    }
+  }
+
   function handleSearch(searchText) {
     setDisplayList(stockDb.filter(item => {
       let nameMatch = item.Name.toLowerCase().includes(searchText.toLowerCase())
@@ -60,7 +66,7 @@ function App() {
       <MyPortfolio watchlist={ watchlist } handleDeletePortfolio={ handleDeletePortfolio }/>
       <br></br>
       <hr></hr>
-      <StockPage displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio }  handleSearch={handleSearch}/>
+      <StockPage watchlist={ watchlist } displayList={ displayList } handleAddToPortfolio={ handleAddToPortfolio } handleSearch={handleSearch} handleAddToDetails={ handleAddToDetails }/>
       <hr></hr>
     </div>
   );
