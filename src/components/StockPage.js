@@ -18,6 +18,16 @@ function StockPage({ detailList, displayList, handleAddToPortfolio, handleSearch
             <div className="search-container">
                 <SearchBar handleSearch={handleSearch}/>
             </div>
+<<<<<<< HEAD
+=======
+            <br></br>
+            <hr></hr>
+            <div className="detail-container">
+                <div className="col-8">
+                <StockDetails detailList={ detailList } />
+                </div>
+            </div>
+>>>>>>> acd09ea (ignore)
         </div>
     )
 }
