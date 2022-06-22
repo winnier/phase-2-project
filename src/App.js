@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import './App.css';
 import NavBar from './components/NavBar'
 import StockPage from './components/StockPage'
-import MyPortfolio from './components/MyPortfolio'
+import MyPortfolio from './components/Watchlist'
 import StockDetails from "./components/StockDetails";
 
 
@@ -61,7 +61,11 @@ function App() {
       <NavBar/>
       <br></br>
       <h2>My Watchlist</h2>
-      <MyPortfolio watchlist={ watchlist } handleDeletePortfolio={ handleDeletePortfolio }/>
+      <MyPortfolio 
+        watchlist={ watchlist }
+        handleDeletePortfolio={ handleDeletePortfolio }
+        onCickAddToDetails={handleAddToDetails}
+      />
       <br></br>
       <hr></hr>
       <StockPage

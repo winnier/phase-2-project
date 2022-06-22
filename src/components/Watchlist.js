@@ -1,11 +1,10 @@
 import React from 'react'
 import WatchlistCard from './WatchlistCard'
-import StockCard from './StockCard'
 
 
-function MyPortfolio({ watchlist, handleDeletePortfolio }) {
+function MyPortfolio({ watchlist, handleDeletePortfolio, onCickAddToDetails }) {
     const portfolioList = watchlist.map((item) => {
-        return <WatchlistCard key={ item.Symbol } stock={ item } onClickDelete={ handleDeletePortfolio }/>
+        return <WatchlistCard key={ item.Symbol } stock={ item } onClickDelete={ handleDeletePortfolio } onCickAddToDetails={onCickAddToDetails}/>
     })
     
     return (

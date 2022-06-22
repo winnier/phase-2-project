@@ -2,7 +2,7 @@ import React from "react";
 import StockCard from "./StockCard";
 
 
-function StockDetails({ detailList  }) {
+function StockDetails({ detailList }) {
     const stockList = detailList.map(item => {
         return <StockCard key={ item.Symbol } stock={ item } />
       })

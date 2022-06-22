@@ -12,7 +12,13 @@ function StockCard({ stock, onClickAdd, onClickDelete, onCickAddToDetails }) {
             <p className="ticker">{stock.Symbol}</p>
             <p className="price">{stock["Last Sale"]}</p>
             <p className="sector">{stock.Sector}</p>
-            <span>
+            <button
+              className="details-button"
+              onClick={() => onCickAddToDetails(stock)}
+            >
+              Details
+            </button>
+            {/* <span>
               <div className="ui center aligned segment basic">
                 <button
                   className="ui mini red button"
@@ -21,7 +27,7 @@ function StockCard({ stock, onClickAdd, onClickDelete, onCickAddToDetails }) {
                   Details
                 </button>
               </div>
-            </span>
+            </span> */}
           </div>
         </div>
       </div>
