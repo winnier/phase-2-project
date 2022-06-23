@@ -19,11 +19,11 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">FlatDaq</Link>
-      <ul>
-        <CustomLink to="/watchlist">My Watchlist</CustomLink>
-        <CustomLink to="/stockpage">Stocks</CustomLink>
-        <CustomLink to="/stockdetails">Details</CustomLink>
-      </ul>
+        <ul>
+          <CustomLink to="/stockpage">Stocks</CustomLink>
+          <CustomLink to="/watchlist">My Watchlist</CustomLink>
+          <CustomLink to="/stockdetails">Details</CustomLink>
+        </ul>
   </nav>
   )
 }
