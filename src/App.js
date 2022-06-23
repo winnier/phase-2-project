@@ -6,6 +6,7 @@ import MyPortfolio from './components/Watchlist'
 import StockDetails from "./components/StockDetails";
 import { Route, Routes } from "react-router-dom"
 import Watchlist from "./components/Watchlist";
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -50,9 +51,13 @@ function App() {
     }
   }
 
+  let navigate = useNavigate()
+
+
   function handleAddToDetails(newItem) {
     if (detailList.indexOf(newItem) === -1) {
-       setDetailList([...detailList, newItem]) 
+      setDetailList([...detailList, newItem])
+      navigate("../stockdetails", {replace: true})
     }
   }
 

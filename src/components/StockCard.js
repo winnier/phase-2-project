@@ -1,8 +1,10 @@
 import React from "react";
 
 
+
 function StockCard({ stock, onClickAdd, onClickDelete, onCickAddToDetails }) {
 
+  
   return (
     <div>
       <div className="card" onClick={() => onClickAdd(stock)}>
