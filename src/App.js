@@ -4,10 +4,31 @@ import NavBar from './components/NavBar'
 import StockPage from './components/StockPage'
 import MyPortfolio from './components/Watchlist'
 import StockDetails from "./components/StockDetails";
+import { Route, Routes } from "react-router-dom"
+import Watchlist from "./components/Watchlist";
 
 
 
 function App() {
+
+// let Component
+//   switch (window.location.pathname) {
+//     case "/":
+//       Component= App
+//       break
+//     case "/watchlist":
+//       Component= MyPortfolio
+//       break  
+//     case "/stockpage":
+//       Component= StockPage
+//       break
+//     case "/stockdetails":
+//       Component= StockDetails
+//       break  
+//   }
+
+
+
 
   const [stockDb, setStockDb] = useState([])
   const [displayList, setDisplayList] = useState([])
@@ -58,9 +79,24 @@ function App() {
 
   return (
     <div>
-      <NavBar/>
-      <br></br>
-      <h2>My Watchlist</h2>
+      <NavBar />
+      <div className="container"></div>
+        <Routes>
+          <Route path="/" element={<NavBar />} />
+          <Route path="/watchlist" element={<Watchlist 
+            watchlist={ watchlist }
+            handleDeletePortfolio={ handleDeletePortfolio }
+            onCickAddToDetails={handleAddToDetails}
+          />} />
+          <Route path="/stockpage" element={<StockPage
+            displayList={ displayList }
+            handleAddToPortfolio={ handleAddToPortfolio }
+            handleSearch={handleSearch}
+            handleAddToDetails={ handleAddToDetails }
+            detailList={ detailList }/>} />
+          <Route path="/stockdetails" element={<StockDetails detailList={ detailList } />} />
+        </Routes>
+      {/* <h2>My Watchlist</h2>
       <MyPortfolio 
         watchlist={ watchlist }
         handleDeletePortfolio={ handleDeletePortfolio }
@@ -75,7 +111,7 @@ function App() {
         handleAddToDetails={ handleAddToDetails }
         detailList={ detailList }/>
       <hr></hr>
-      <StockDetails detailList={ detailList } />
+      <StockDetails detailList={ detailList } /> */}
     </div>
   );
 }

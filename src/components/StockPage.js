@@ -6,7 +6,7 @@ import StockContainer from "./StockContainer"
 
 
 function StockPage({ displayList, handleAddToPortfolio, handleSearch, handleAddToDetails }) {
-  
+
 
     return (
         <div className="stock-page">
