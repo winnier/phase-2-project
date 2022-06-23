@@ -17,7 +17,6 @@ function StockPage({ displayList, handleAddToPortfolio, handleSearch, handleAddT
                 handleAddToPortfolio={ handleAddToPortfolio } 
                 handleAddToDetails={ handleAddToDetails } />
                 </div>
-            
             </div>            
             <div className="search-container">
                 <SearchBar handleSearch={handleSearch}/>

@@ -74,7 +74,7 @@ body {
 
 
 h2 {
-  padding-left: 10%;
+  padding-left: 5%;
 }
 
 h4 {
@@ -113,10 +113,8 @@ h4 {
 }
 
 .search-container {
-  width: 30%;
+  width: max-content;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
 
 .card-container {
@@ -131,13 +129,12 @@ h4 {
 
 .stock-page {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding-bottom: 5rem;
 }
 
 .all-stocks-container {
-  padding-left: 5rem;
-  padding-bottom: 5rem;
-  width: 60%;
+  width: 70%;
 }
 
 .watchlist-card {

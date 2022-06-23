@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import './App.css';
 import NavBar from './components/NavBar'
 import StockPage from './components/StockPage'
-import MyPortfolio from './components/Watchlist'
 import StockDetails from "./components/StockDetails";
 import { Route, Routes } from "react-router-dom"
 import Watchlist from "./components/Watchlist";
