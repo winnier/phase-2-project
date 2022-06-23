@@ -8,8 +8,7 @@ body {
 }
 
 .container {
-  margin: 1rem;
-  text-align: center;
+  height: 1px;
 }
 
 .nav {
@@ -20,6 +19,7 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 1rem 1rem;
+  position: sticky;
 }
 
 .site-title {
@@ -87,17 +87,13 @@ body {
 
 }
 
-
-
 .get-started {
   border: transparent;
   border-radius: 25px;
   box-shadow: #cfcfd0;
   border-color: #1E88E5;
+  cursor: pointer;
 }
-
-
-
 
 h2 {
   padding-left: 5%;
@@ -116,7 +112,6 @@ h4 {
   transition: 0.3s;
   border-radius: 8px;
   min-width: 20rem;
-  /* max-width: 40rem; */
 }
 
 .card-body:hover {
