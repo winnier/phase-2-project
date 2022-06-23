@@ -13,7 +13,7 @@ function StockCard({ stock, onClickAdd, onCickAddToDetails }) {
 
   let navigate = useNavigate();
 
-  async function handleNavigate(event) {
+  async function handleNavigate(e) {
     navigate("../watchlist", { replace: true })
   }
 
@@ -28,6 +28,11 @@ function StockCard({ stock, onClickAdd, onCickAddToDetails }) {
         </button>
       )
     }
+  }
+
+  function handleDetailsClick(e, selectedStock) {
+    e.stopPropagation()
+    onCickAddToDetails(selectedStock)
   }
 
   return (
@@ -47,7 +52,7 @@ function StockCard({ stock, onClickAdd, onCickAddToDetails }) {
             <p className="sector">{stock.Sector}</p>
             <button
               className="details-button"
-              onClick={() => onCickAddToDetails(stock)}
+              onClick={(e) => handleDetailsClick(e, stock)}
             >
               Details
             </button>

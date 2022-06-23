@@ -47,7 +47,7 @@ function App() {
 
   function handleAddToPortfolio(newItem) {
     if (watchlist.indexOf(newItem) === -1) {
-       setWatchlist([...watchlist, newItem]) 
+       setWatchlist([...watchlist, newItem])
     }
   }
 
@@ -55,10 +55,8 @@ function App() {
 
 
   function handleAddToDetails(newItem) {
-    if (detailList.indexOf(newItem) === -1) {
-      setDetailList([...detailList, newItem])
-      navigate("../stockdetails", {replace: true})
-    }
+    setDetailList([newItem])
+    navigate("../stockdetails", {replace: true})
   }
 
   function handleSearch(searchText) {

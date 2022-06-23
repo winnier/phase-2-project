@@ -168,7 +168,7 @@ h4 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 8px;
-  width: 30rem;
+  width: 26.5rem;
 }
 
 .watchlist-card-title {
@@ -188,7 +188,7 @@ h4 {
 .watchlist-container {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  flex-wrap: wrap;
 }
 
 .watchlist-remove-btn {
@@ -197,7 +197,7 @@ h4 {
   width: 20px;
   border-radius: 50%;
   background-color: #cfcfd0;
-  padding: 3px;
+  margin: 5px;
 }
 
 .watchlist-remove-btn:hover {
@@ -208,6 +208,11 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.watchlist-card-top-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .details-button {
