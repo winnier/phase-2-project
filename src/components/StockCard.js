@@ -1,15 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 
-function StockCard({ stock, onClickAdd, onClickDelete, onCickAddToDetails }) {
+function StockCard({ stock, onClickAdd, onCickAddToDetails }) {
 
+  const [inWatchlist, setInWatchlist] = useState(false)
   
+  function watchlistConfirm() {
+    setInWatchlist(true)
+  }
+
+  let navigate = useNavigate();
+
+  async function handleNavigate(event) {
+    navigate("../watchlist", { replace: true })
+  }
+
+  function WatchlistBtn() {
+    if(inWatchlist) {
+      return (
+        <button 
+          className="watchlist-btn"
+          onClick={() => handleNavigate()}
+        >
+          Added to Watchlist
+        </button>
+      )
+    }
+  }
+
   return (
     <div>
-      <div className="card" onClick={() => onClickAdd(stock)}>
-        <div className="card-body" onClick={() => onClickDelete(stock)}>
-          <h5 className="card-title">{stock.Name}</h5>
+      <div className="card">
+        <div className="card-body" onClick={() => {
+            onClickAdd(stock)
+            watchlistConfirm()
+        }}>
+          <div className="card-top-row">
+            <h5 className="card-title">{stock.Name}</h5>
+            <WatchlistBtn />
+          </div>
           <div className="card-details">
             <p className="ticker">{stock.Symbol}</p>
             <p className="price">{stock["Last Sale"]}</p>
