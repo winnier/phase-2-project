@@ -35,11 +35,13 @@ body {
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 }
 
 .site-title {
   font-size: 2rem;
+  font-family: inherit;
+  font-weight: bold;
 }
 
 .nav ul {
@@ -56,15 +58,17 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: .5rem;
 }
 
 .nav li.active {
   background-color: #555;
+  border-radius: 5px;
 }
 
 .nav li:hover {
   background-color: #777;
+  border-radius: 5px;
 }
 
 
