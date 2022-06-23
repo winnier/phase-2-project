@@ -6,6 +6,7 @@ import StockDetails from "./components/StockDetails";
 import { Route, Routes } from "react-router-dom"
 import Watchlist from "./components/Watchlist";
 import { useNavigate } from 'react-router-dom'
+import Home from "./components/Home";
 
 
 
@@ -86,7 +87,7 @@ function App() {
       <NavBar />
       <div className="container"></div>
         <Routes>
-          <Route path="/" element={<NavBar />} />
+          <Route path="/" element={<Home />} />
           <Route path="/watchlist" element={<Watchlist 
             watchlist={ watchlist }
             handleDeletePortfolio={ handleDeletePortfolio }

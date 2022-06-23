@@ -24,7 +24,7 @@ export default function Navbar() {
           <CustomLink to="/watchlist">My Watchlist</CustomLink>
           <CustomLink to="/stockdetails">Details</CustomLink>
         </ul>
-  </nav>
+    </nav>
   )
 }
 
@@ -35,7 +35,7 @@ function CustomLink({ to, children, ...props}) {
     <li className={isActive ? "active" : ""}>
       <Link to={ to } {...props}>
         { children }
-        </Link>
+      </Link>
     </li>
   )
 }
