@@ -14,6 +14,9 @@ function Home() {
     return (
         <div className="home-body">
             <div className="mx-auto ">
+                <br></br>
+                <br></br>
+                <br></br>
                 <div className="text-center">
                     <h2 className="home-header">
                     <div className="home-text-1">The stock platform</div>
