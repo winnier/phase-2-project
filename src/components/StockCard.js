@@ -20,7 +20,7 @@ function StockCard({ stock, onClickAdd, onCickAddToDetails }) {
   function WatchlistBtn() {
     if(inWatchlist) {
       return (
-        <button 
+        <button
           className="watchlist-btn"
           onClick={() => handleNavigate()}
         >

@@ -318,4 +318,13 @@ h4 {
   cursor: pointer;
 }
 
+.details-container {
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(14, 96, 196, 0.2);
+}
 
+.details-card {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}

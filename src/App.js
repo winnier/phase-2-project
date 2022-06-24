@@ -28,13 +28,14 @@ function App() {
 //       break  
 //   }
 
-
-
+  const apiKey = 'A85G8HED7A54MTDR'
 
   const [stockDb, setStockDb] = useState([])
   const [displayList, setDisplayList] = useState([])
   const [watchlist, setWatchlist] = useState([])
   const [detailList, setDetailList] = useState([])
+  const [selectedStockData, setSelectedStockData] = useState({})
+  const [selectedTimeseries, setSelectedTimeseries] = useState({})
 
   useEffect(() => {
     fetch("http://localhost:3000/stocks")
@@ -45,6 +46,27 @@ function App() {
     });
   }, []);
 
+  function getStockProfile(stockItem) {
+    let ticker = stockItem.Symbol
+    fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}&apikey=${apiKey}`)
+    .then(response => response.json())
+    .then(data => setSelectedStockData(data))
+  }
+
+  function getCurrentQuote(stockItem) {
+    let ticker = stockItem.Symbol
+    fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=${apiKey}`)
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }
+
+  // function getWeeklyTimeseries(stockItem) {
+  //   let ticker = stockItem.Symbol
+  //   fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=${ticker}&apikey=${apiKey}`)
+  //   .then(response => response.json())
+  //   .then(data => console.log(data))
+  // }
+
   function handleAddToPortfolio(newItem) {
     if (watchlist.indexOf(newItem) === -1) {
        setWatchlist([...watchlist, newItem])
@@ -53,9 +75,11 @@ function App() {
 
   let navigate = useNavigate()
 
-
-  function handleAddToDetails(newItem) {
-    setDetailList([newItem])
+  function handleAddToDetails(stockItem) {
+    setDetailList([stockItem])
+    getStockProfile(stockItem)
+    getCurrentQuote(stockItem)
+    // getWeeklyTimeseries(stockItem)
     navigate("../stockdetails", {replace: true})
   }
 
@@ -88,16 +112,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/watchlist" element={<Watchlist 
             watchlist={ watchlist }
-            handleDeletePortfolio={ handleDeletePortfolio }
+            handleDeletePortfolio={handleDeletePortfolio}
             onCickAddToDetails={handleAddToDetails}
           />} />
           <Route path="/stockpage" element={<StockPage
             displayList={ displayList }
-            handleAddToPortfolio={ handleAddToPortfolio }
+            handleAddToPortfolio={handleAddToPortfolio}
             handleSearch={handleSearch}
-            handleAddToDetails={ handleAddToDetails }
+            handleAddToDetails={handleAddToDetails}
             detailList={ detailList }/>} />
-          <Route path="/stockdetails" element={<StockDetails detailList={ detailList } />} />
+          <Route path="/stockdetails" element={<StockDetails selectedStockData={selectedStockData} />} />
         </Routes>
       {/* <h2>My Watchlist</h2>
       <MyPortfolio 

@@ -1,18 +1,14 @@
 import React from "react";
-import StockCard from "./StockCard";
+import DetailsCard from "./DetailsCard";
 
 
-function StockDetails({ detailList }) {
-    
-    const stockList = detailList.map(item => {
-        return <StockCard key={ item.Symbol } stock={ item } />
-      })
+function StockDetails({ selectedStockData }) {
    
   return (
     <div>
       <h2>Details</h2>
       <div className="details-container">
-        { stockList }
+        <DetailsCard selectedStockData={selectedStockData} />
       </div>
     </div>
   );
