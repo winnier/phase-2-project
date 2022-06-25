@@ -109,7 +109,7 @@ function App() {
       <NavBar />
       <div className="container"></div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/watchlist" element={<Watchlist 
             watchlist={ watchlist }
             handleDeletePortfolio={handleDeletePortfolio}

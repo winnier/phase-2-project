@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import Ticker from 'react-ticker'
-
+// import HomeTicker from "./HomeTicker";
 
 
 function Home() {
@@ -38,13 +37,17 @@ function Home() {
                 <br></br>
                 <br></br>
                 <br></br>
-            </div>
-
-            <div className="home-ticker">
-                <h3>Stock Ticker</h3>
+                <br></br>
+                <br></br>
+                <br></br>
+                
+                <br></br>
+                <br></br>
+                <br></br>
             </div>
         </div>
     );
 }
 
 export default Home;
+{/* <HomeTicker /> */}
