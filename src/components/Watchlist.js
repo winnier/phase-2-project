@@ -9,8 +9,8 @@ function Watchlist({ watchlist, handleDeletePortfolio, onCickAddToDetails }) {
     })
     
     return (
-        <div>
-            <h2>My Watchlist</h2>
+        <div className='watchlist-page'>
+            <h2 className='watchlist-header'>My Watchlist</h2>
             <div className='watchlist-container'>
                 { portfolioList }
             </div>

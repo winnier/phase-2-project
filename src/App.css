@@ -224,10 +224,6 @@ body {
   transform: translate(-50%, -50%);
 } */
 
-h2 {
-  padding-left: 5%;
-}
-
 h4 {
   margin-bottom: 5px;
 }
@@ -284,9 +280,13 @@ h4 {
   justify-content: space-evenly;
   padding-bottom: 5rem;
 }
+.watchlist-page {
+  padding-left: 80px;
+}
 
 .all-stocks-container {
   width: 70%;
+
 }
 
 .watchlist-card {
