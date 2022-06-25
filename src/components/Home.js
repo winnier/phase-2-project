@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+// import Ticker from 'react-ticker'
 
 
 
@@ -32,6 +33,15 @@ function Home() {
                     {/* <button className="get-started" onClick={() => handleNavigate()}>Get Started</button> */}
                     <button class="button-85" role="button" onClick={() => handleNavigate()}>Get Started</button>
                 </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+            </div>
+
+            <div className="home-ticker">
+                <h3>Stock Ticker</h3>
             </div>
         </div>
     );

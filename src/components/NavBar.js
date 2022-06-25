@@ -17,14 +17,20 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom"
 export default function Navbar() {
 
   return (
+  
     <nav className="nav">
+      <a>
+        <img className="nav-logo" src="./images/bull-market.png" alt="bull logo"></img>
+      
       <Link to="/" className="site-title">FlatDaq</Link>
+      </a>
         <ul>
           <CustomLink to="/stockpage">Stocks</CustomLink>
           <CustomLink to="/watchlist">My Watchlist</CustomLink>
           <CustomLink to="/stockdetails">Details</CustomLink>
         </ul>
     </nav>
+
   )
 }
 
