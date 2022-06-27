@@ -19,8 +19,8 @@ function Home() {
                 <br></br>
                 <div className="text-center">
                     <h2 className="home-header">
-                    <div className="home-text-1">The stock platform</div>
-                    <div className="home-text-2">for beginners</div>
+                    <div className="home-text-1">The Stock Platform</div>
+                    <div className="home-text-2">For Beginners</div>
                     </h2>
                     <br></br>
                     <p className="home-text-3">Check out stock details and add them to your portfolio with one easy click!</p>

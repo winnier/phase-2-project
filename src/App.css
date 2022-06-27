@@ -86,14 +86,14 @@ body {
  }
 
 .home-text-1 {
-  color: black;
+  color: rgb(247, 245, 245);
   text-align: center;
   font-size: 60px;
 }
 .home-text-2 {
-  color: black;
+  color: rgb(246, 246, 246);
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .home-text-3 {
@@ -367,12 +367,15 @@ h4 {
 }
 
 .details-header {
-  margin: 20px;
+  margin-left: 80px;
+
 }
 
 .details-container {
-  margin: 20px;
+  margin-left: 78px;
+  margin-right: 78px;
   box-shadow: 0 4px 8px 0 rgba(14, 96, 196, 0.2);
+ 
 }
 
 .details-card {
