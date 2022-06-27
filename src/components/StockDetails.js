@@ -6,7 +6,7 @@ function StockDetails({ selectedStockData }) {
    
   return (
     <div>
-      <h2>Details</h2>
+      <h2 className="details-header">Details</h2>
       <div className="details-container">
         <DetailsCard selectedStockData={selectedStockData} />
       </div>

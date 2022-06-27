@@ -35,7 +35,7 @@ function App() {
   const [watchlist, setWatchlist] = useState([])
   const [detailList, setDetailList] = useState([])
   const [selectedStockData, setSelectedStockData] = useState({})
-  const [selectedTimeseries, setSelectedTimeseries] = useState({})
+  // const [selectedTimeseries, setSelectedTimeseries] = useState({})
 
   useEffect(() => {
     fetch("http://localhost:3000/stocks")
@@ -53,12 +53,12 @@ function App() {
     .then(data => setSelectedStockData(data))
   }
 
-  function getCurrentQuote(stockItem) {
-    let ticker = stockItem.Symbol
-    fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=${apiKey}`)
-    .then(response => response.json())
-    .then(data => console.log(data))
-  }
+  // function getCurrentQuote(stockItem) {
+  //   let ticker = stockItem.Symbol
+  //   fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${ticker}&apikey=${apiKey}`)
+  //   .then(response => response.json())
+  //   .then(data => console.log(data))
+  // }
 
   // function getWeeklyTimeseries(stockItem) {
   //   let ticker = stockItem.Symbol
@@ -78,7 +78,7 @@ function App() {
   function handleAddToDetails(stockItem) {
     setDetailList([stockItem])
     getStockProfile(stockItem)
-    getCurrentQuote(stockItem)
+    // getCurrentQuote(stockItem)
     // getWeeklyTimeseries(stockItem)
     navigate("../stockdetails", {replace: true})
   }
